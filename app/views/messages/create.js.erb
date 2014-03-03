@@ -1,0 +1,5 @@
+//console.log("javascript firing");
+//$('#chat').append("<li>hello</li>");
+$('#chat').append("<%= escape_javascript(render @message) %>");
+$('.cbox').animate({scrollTop: $('.cbox').get(0).scrollHeight},1400,"swing");
+$('#messy').val('');

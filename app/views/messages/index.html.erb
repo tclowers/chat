@@ -1,0 +1,13 @@
+<h1>Chat</h1>
+
+<div class="cbox">
+  <ul id="chat">
+    <%= render @messages %>
+  </ul>
+</div>
+
+<%= form_for Message.new, remote: true do |f| %>
+  <div class="input_box">
+    <%= f.text_area :content, id: "messy" %> <%= f.submit "Send" %>
+  </div>
+<% end %>

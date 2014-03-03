@@ -14,3 +14,6 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore the Faye token, (it's a secret)
+/config/initializers/faye_token.rb

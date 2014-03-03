@@ -1,5 +1,7 @@
 //console.log("javascript firing");
 //$('#chat').append("<li>hello</li>");
-$('#chat').append("<%= escape_javascript(render @message) %>");
-$('.cbox').animate({scrollTop: $('.cbox').get(0).scrollHeight},1400,"swing");
+<% broadcast "/messages/new" do %>
+	$('#chat').append("<%= escape_javascript(render @message) %>");
+	$('.cbox').animate({scrollTop: $('.cbox').get(0).scrollHeight},1400,"swing");
+<% end %>
 $('#messy').val('');
